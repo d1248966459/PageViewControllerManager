@@ -13,6 +13,8 @@
 @optional
 -(NSUInteger)pageScrollDefaultShowIndexWithManager:(PageScrollManager *)manager;
 -(CGFloat)pageScrollManagerWidthForTitleWithManager:(PageScrollManager *)manager;
+-(CGFloat)pageScrollManagerHeightForTitleWithManager:(PageScrollManager *)manager;
+-(UIFont *)pageScrollManagerFontForTitlewithManager:(PageScrollManager *)manager index:(NSUInteger)index;
 @required
 -(NSString *)pageScrollTabTitleWithManager:(PageScrollManager *)manager index:(NSUInteger)index;
 

@@ -69,17 +69,27 @@
         [self.mainViewController.view insertSubview:self.contentView atIndex:0];
         
         // constraints
-        
+        CGFloat height = [self titleLabelHeight]+20;
+
             self.contentView.translatesAutoresizingMaskIntoConstraints = NO;
             NSDictionary *views = @{ @"contentView" : self.contentView };
             [self.mainViewController.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-0-[contentView]-0-|" options:0 metrics:nil views:views]];
-            [self.mainViewController.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-64-[contentView]-0-|" options:0 metrics:nil views:views]];
+//            [self.mainViewController.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-64-[contentView]-0-|" options:0 metrics:nil views:views]];
+        
+        NSMutableArray * constrains = [[NSMutableArray alloc] init];
+        NSLayoutConstraint * top = [NSLayoutConstraint constraintWithItem:self.contentView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.mainViewController.view attribute:NSLayoutAttributeTop multiplier:1 constant:height];
+        [constrains addObject:top];
+        NSLayoutConstraint * bottom = [NSLayoutConstraint constraintWithItem:self.contentView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.mainViewController.view attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
+        [constrains addObject:bottom];
+        [self.mainViewController.view addConstraints:constrains];
+        
     }
 
 }
 
 -(void)createTabView{
-    self.titleTab = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 20, self.mainViewController.view.bounds.size.width, 44)];
+    CGFloat height = [self titleLabelHeight];
+    self.titleTab = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 20, self.mainViewController.view.bounds.size.width, height)];
     self.titleTab.backgroundColor =[UIColor lightGrayColor];
     [self.mainViewController.view addSubview:self.titleTab];
     self.titleTab.backgroundColor = [UIColor whiteColor];
@@ -87,11 +97,12 @@
     [self.contentViewControllers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         UIButton * titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
         titleButton.backgroundColor = [UIColor lightGrayColor];
-        titleButton.frame = CGRectMake(idx*self.titleLabelWidth, 0, self.titleLabelWidth, 44);
+        titleButton.frame = CGRectMake(idx*self.titleLabelWidth, 0, self.titleLabelWidth, height);
         [titleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [titleButton setTitleColor:[UIColor greenColor] forState:UIControlStateSelected];
         [titleButton setTitle:[self getTitleNameWithIndex:idx] forState:UIControlStateNormal];
         [titleButton addTarget:self action:@selector(titleLabelClick:) forControlEvents:UIControlEventTouchUpInside];
+        titleButton.titleLabel.font = [self titleLabelFontWithIndex:idx];
         if (idx == self.defaultIndex) {
             titleButton.selected = YES;
         }
@@ -101,7 +112,8 @@
 }
 
 -(void)createAnimationView{
-    self.animationView = [[UIView alloc] initWithFrame:CGRectMake(self.titleLabelWidth*self.selectedIndex, 42, self.titleLabelWidth, 2)];
+    
+    self.animationView = [[UIView alloc] initWithFrame:CGRectMake(self.titleLabelWidth*self.selectedIndex, self.titleTab.bounds.size.height-2, self.titleLabelWidth, 2)];
     [self.titleTab addSubview:self.animationView];
     self.animationView.backgroundColor = [UIColor greenColor];
 }
@@ -234,6 +246,20 @@
         return [self.delegate pageScrollManagerWidthForTitleWithManager:self];
     }
     return [UIScreen mainScreen].bounds.size.width/3;
+}
+
+-(CGFloat)titleLabelHeight{
+    if ([self.delegate respondsToSelector:@selector(pageScrollManagerHeightForTitleWithManager:)]) {
+        return [self.delegate pageScrollManagerHeightForTitleWithManager:self];
+    }
+    return 35;
+}
+
+-(UIFont *)titleLabelFontWithIndex:(NSInteger)index{
+    if ([self.delegate respondsToSelector:@selector(pageScrollManagerFontForTitlewithManager:index:)]) {
+        return [self.delegate pageScrollManagerFontForTitlewithManager:self index:index];
+    }
+    return [UIFont systemFontOfSize:15];
 }
 
 -(NSMutableArray *)contentViewControllers{
