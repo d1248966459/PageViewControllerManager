@@ -146,7 +146,7 @@
 -(void)setSelectedAnimationWithIndex:(NSInteger)index{
     
     [UIView animateWithDuration:0.3 animations:^{
-        self.animationView.frame = CGRectMake(self.titleLabelWidth*index, 42, self.titleLabelWidth,2);
+        self.animationView.frame = CGRectMake(self.titleLabelWidth*index, self.animationView.frame.origin.y, self.titleLabelWidth,2);
     }];
 
 }
@@ -221,11 +221,18 @@
  *  @param pendingViewControllers 将要展示的vc
  */
 -(void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers{
-
     UIViewController * tempVC = [pendingViewControllers firstObject];
     NSInteger index = [self indexOfViewController:tempVC];
     [self setSelectedAnimationWithIndex:index];
     [self setSelectedTitleButton:index];
+
+    }
+-(void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed{
+    UIViewController * tempVC = [self.pageViewController.viewControllers firstObject];
+    NSInteger index = [self indexOfViewController:tempVC];
+    [self setSelectedAnimationWithIndex:index];
+    [self setSelectedTitleButton:index];
+
 }
 #pragma mark -- getter
 -(NSUInteger)indexOfViewController:(UIViewController *)controller{
