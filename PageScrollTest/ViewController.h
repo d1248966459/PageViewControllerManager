@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "PageScrollManager.h"
 
 @interface ViewController : UIViewController
 

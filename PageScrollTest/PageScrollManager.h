@@ -11,11 +11,48 @@
 @class PageScrollManager;
 @protocol PageScrollDelegate <NSObject>
 @optional
+/**
+ *  默认选中index
+ *
+ *  @param manager manager
+ *
+ *  @return 默认选中index
+ */
 -(NSUInteger)pageScrollDefaultShowIndexWithManager:(PageScrollManager *)manager;
+/**
+ *  title 宽度
+ *
+ *  @param manager manager
+ *
+ *  @return 宽度
+ */
 -(CGFloat)pageScrollManagerWidthForTitleWithManager:(PageScrollManager *)manager;
+/**
+ *  title height
+ *
+ *  @param manager manager
+ *
+ *  @return 高度
+ */
 -(CGFloat)pageScrollManagerHeightForTitleWithManager:(PageScrollManager *)manager;
+/**
+ *  设置title font
+ *
+ *  @param manager manager
+ *  @param index   index
+ *
+ *  @return font
+ */
 -(UIFont *)pageScrollManagerFontForTitlewithManager:(PageScrollManager *)manager index:(NSUInteger)index;
 @required
+/**
+ *  title name
+ *
+ *  @param manager manager
+ *  @param index   index
+ *
+ *  @return name
+ */
 -(NSString *)pageScrollTabTitleWithManager:(PageScrollManager *)manager index:(NSUInteger)index;
 
 @end
@@ -32,6 +69,9 @@
 @property (nonatomic,weak)id<PageScrollDelegate>delegate;
 @property (nonatomic,weak)id<PageScrollDataSource>dataSource;
 
+/**
+ *  对页面进行布局操作
+ */
 -(void)reloadData;
 
 @end
