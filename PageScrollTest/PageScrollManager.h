@@ -59,8 +59,22 @@
 
 @protocol PageScrollDataSource <NSObject>
 @required
+/**
+ *  pageScrollVC 所在vc
+ *
+ *  @param manager manager
+ *
+ *  @return pageScrollVC 所在vc
+ */
 -(UIViewController *)pageScrollMainViewControllerWithManager:(PageScrollManager *)manager;
--(NSMutableArray *)pageScrollDataSourceWithManager:(PageScrollManager *)manager;
+/**
+ *  获得 数据VC
+ *
+ *  @param manager manager
+ *
+ *  @return 数组
+ */
+-(NSMutableArray <UIViewController*> *)pageScrollDataSourceWithManager:(PageScrollManager *)manager;
 
 @end
 

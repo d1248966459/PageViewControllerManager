@@ -44,7 +44,7 @@
     return self;
 }
 
--(NSMutableArray *)pageScrollDataSourceWithManager:(PageScrollManager *)manager{
+-(NSMutableArray <UIViewController *>*)pageScrollDataSourceWithManager:(PageScrollManager *)manager{
     return self.contentViewControllers;
 }
 
