@@ -44,7 +44,7 @@
     self.pageViewController.dataSource = self;
     
 }
-
+#pragma mark -- 刷新pagescroll
 -(void)reloadData{
     [self.mainViewController addChildViewController:self.pageViewController];
     [self.mainViewController.view addSubview:self.pageViewController.view];
@@ -54,25 +54,21 @@
     [self createTabView];
     [self createAnimationView];
 }
-
+#pragma mark -- 设置约束
 -(void)setContentVIewContrains{
     self.contentView = [self.mainViewController.view viewWithTag:kContentViewTag];
     if (!self.contentView) {
-        
-        // Populate pageViewController.view in contentView
-        self.contentView = self.pageViewController.view;
+                self.contentView = self.pageViewController.view;
         self.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         self.contentView.bounds = self.mainViewController.view.bounds;
         self.contentView.tag = kContentViewTag;
         [self.mainViewController.view insertSubview:self.contentView atIndex:0];
         
-        // constraints
         CGFloat height = [self titleLabelHeight]+20;
 
-            self.contentView.translatesAutoresizingMaskIntoConstraints = NO;
-            NSDictionary *views = @{ @"contentView" : self.contentView };
-            [self.mainViewController.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-0-[contentView]-0-|" options:0 metrics:nil views:views]];
-//            [self.mainViewController.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-64-[contentView]-0-|" options:0 metrics:nil views:views]];
+        self.contentView.translatesAutoresizingMaskIntoConstraints = NO;
+        NSDictionary *views = @{ @"contentView" : self.contentView };
+        [self.mainViewController.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-0-[contentView]-0-|" options:0 metrics:nil views:views]];
         
         NSMutableArray * constrains = [[NSMutableArray alloc] init];
         NSLayoutConstraint * top = [NSLayoutConstraint constraintWithItem:self.contentView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.mainViewController.view attribute:NSLayoutAttributeTop multiplier:1 constant:height];
@@ -84,7 +80,8 @@
     }
 
 }
-
+#pragma mark -- create title
+//TODO 单独做一个控件顶部动画封装进去
 -(void)createTabView{
     CGFloat height = [self titleLabelHeight];
     self.titleTab = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 20, self.mainViewController.view.bounds.size.width, height)];
