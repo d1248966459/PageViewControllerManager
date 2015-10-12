@@ -24,8 +24,6 @@
 @property (nonatomic,strong) UIView * animationView;
 @property (nonatomic,strong) UIView * contentView;
 
-
-
 @end
 
 @implementation PageScrollManager
@@ -221,12 +219,12 @@
  *  @param pendingViewControllers 将要展示的vc
  */
 -(void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers{
-    UIViewController * tempVC = [pendingViewControllers firstObject];
-    NSInteger index = [self indexOfViewController:tempVC];
-    [self setSelectedAnimationWithIndex:index];
-    [self setSelectedTitleButton:index];
+//    UIViewController * tempVC = [pendingViewControllers firstObject];
+//    NSInteger index = [self indexOfViewController:tempVC];
+//    [self setSelectedAnimationWithIndex:index];
+//    [self setSelectedTitleButton:index];
 
-    }
+}
 -(void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed{
     UIViewController * tempVC = [self.pageViewController.viewControllers firstObject];
     NSInteger index = [self indexOfViewController:tempVC];
@@ -273,7 +271,7 @@
     if (_contentViewControllers) {
         return _contentViewControllers;
     }else{
-    
+
         return [self.dataSource pageScrollDataSourceWithManager:self];
     }
 }
