@@ -50,7 +50,7 @@
 
 -(NSString *)pageScrollTabTitleWithManager:(PageScrollManager *)manager index:(NSUInteger)index{
 
-    return @"TOP";
+    return @"Test";
 }
 
 
