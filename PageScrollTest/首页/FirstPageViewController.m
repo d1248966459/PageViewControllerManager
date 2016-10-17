@@ -42,6 +42,8 @@
     _TOP_CollectionView.dataSource = self;
     _TOP_CollectionView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height -50);
     [self.view addSubview:_TOP_CollectionView];
+    
+    
 }
 
 

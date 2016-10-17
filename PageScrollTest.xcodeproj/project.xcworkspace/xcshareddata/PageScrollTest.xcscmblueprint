@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0E8B538B70BFF836AE56CCD087D87A7D7DAC6864",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "456892FB9FF9B0C5E9480E3CFF2CCAEF9F1AE390" : 0,
+    "0E8B538B70BFF836AE56CCD087D87A7D7DAC6864" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "36BB0288-FCBE-4EDA-9E1E-DC98750C42B1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "456892FB9FF9B0C5E9480E3CFF2CCAEF9F1AE390" : "",
+    "0E8B538B70BFF836AE56CCD087D87A7D7DAC6864" : "Page\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PageScrollTest",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PageScrollTest.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/d1248966459\/PageViewControllerManager",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0E8B538B70BFF836AE56CCD087D87A7D7DAC6864"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/madordie\/KTJPushQueueForNavigation",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "456892FB9FF9B0C5E9480E3CFF2CCAEF9F1AE390"
+    }
+  ]
+}
