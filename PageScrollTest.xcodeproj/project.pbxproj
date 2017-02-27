@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		676869A41BB12BA700877A78 /* FirstPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6768699D1BB12BA700877A78 /* FirstPageViewController.m */; settings = {ASSET_TAGS = (); }; };
-		676869A51BB12BA700877A78 /* TOP_CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6768699F1BB12BA700877A78 /* TOP_CollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		676869BF1BB13A4900877A78 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 676869A91BB13A4900877A78 /* MASCompositeConstraint.m */; settings = {ASSET_TAGS = (); }; };
-		676869C01BB13A4900877A78 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 676869AC1BB13A4900877A78 /* MASConstraint.m */; settings = {ASSET_TAGS = (); }; };
-		676869C11BB13A4900877A78 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 676869AE1BB13A4900877A78 /* MASConstraintMaker.m */; settings = {ASSET_TAGS = (); }; };
-		676869C21BB13A4900877A78 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 676869B01BB13A4900877A78 /* MASLayoutConstraint.m */; settings = {ASSET_TAGS = (); }; };
-		676869C31BB13A4900877A78 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 676869B41BB13A4900877A78 /* MASViewAttribute.m */; settings = {ASSET_TAGS = (); }; };
-		676869C41BB13A4900877A78 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 676869B61BB13A4900877A78 /* MASViewConstraint.m */; settings = {ASSET_TAGS = (); }; };
-		676869C51BB13A4900877A78 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 676869B81BB13A4900877A78 /* NSArray+MASAdditions.m */; settings = {ASSET_TAGS = (); }; };
-		676869C61BB13A4900877A78 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 676869BB1BB13A4900877A78 /* NSLayoutConstraint+MASDebugAdditions.m */; settings = {ASSET_TAGS = (); }; };
-		676869C71BB13A4900877A78 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 676869BD1BB13A4900877A78 /* View+MASAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		676869A41BB12BA700877A78 /* FirstPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6768699D1BB12BA700877A78 /* FirstPageViewController.m */; };
+		676869A51BB12BA700877A78 /* TOP_CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6768699F1BB12BA700877A78 /* TOP_CollectionViewCell.m */; };
+		676869BF1BB13A4900877A78 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 676869A91BB13A4900877A78 /* MASCompositeConstraint.m */; };
+		676869C01BB13A4900877A78 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 676869AC1BB13A4900877A78 /* MASConstraint.m */; };
+		676869C11BB13A4900877A78 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 676869AE1BB13A4900877A78 /* MASConstraintMaker.m */; };
+		676869C21BB13A4900877A78 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 676869B01BB13A4900877A78 /* MASLayoutConstraint.m */; };
+		676869C31BB13A4900877A78 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 676869B41BB13A4900877A78 /* MASViewAttribute.m */; };
+		676869C41BB13A4900877A78 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 676869B61BB13A4900877A78 /* MASViewConstraint.m */; };
+		676869C51BB13A4900877A78 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 676869B81BB13A4900877A78 /* NSArray+MASAdditions.m */; };
+		676869C61BB13A4900877A78 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 676869BB1BB13A4900877A78 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		676869C71BB13A4900877A78 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 676869BD1BB13A4900877A78 /* View+MASAdditions.m */; };
+		676FA7971C8EEE4600EF802F /* TestVieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 676FA7961C8EEE4600EF802F /* TestVieController.m */; };
 		678E865D1BAFAE9400DC88EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 678E865C1BAFAE9400DC88EF /* main.m */; };
 		678E86601BAFAE9400DC88EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 678E865F1BAFAE9400DC88EF /* AppDelegate.m */; };
 		678E86631BAFAE9400DC88EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678E86621BAFAE9400DC88EF /* ViewController.m */; };
@@ -26,7 +27,7 @@
 		678E866B1BAFAE9400DC88EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 678E86691BAFAE9400DC88EF /* LaunchScreen.storyboard */; };
 		678E86761BAFAE9400DC88EF /* PageScrollTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 678E86751BAFAE9400DC88EF /* PageScrollTestTests.m */; };
 		678E86811BAFAE9400DC88EF /* PageScrollTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 678E86801BAFAE9400DC88EF /* PageScrollTestUITests.m */; };
-		678E869C1BAFD95800DC88EF /* PageScrollManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 678E869B1BAFD95800DC88EF /* PageScrollManager.m */; settings = {ASSET_TAGS = (); }; };
+		678E869C1BAFD95800DC88EF /* PageScrollManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 678E869B1BAFD95800DC88EF /* PageScrollManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		676869BC1BB13A4900877A78 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
 		676869BD1BB13A4900877A78 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
 		676869BE1BB13A4900877A78 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		676FA7951C8EEE4600EF802F /* TestVieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestVieController.h; sourceTree = "<group>"; };
+		676FA7961C8EEE4600EF802F /* TestVieController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestVieController.m; sourceTree = "<group>"; };
 		678E86581BAFAE9400DC88EF /* PageScrollTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageScrollTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		678E865C1BAFAE9400DC88EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		678E865E1BAFAE9400DC88EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -189,6 +192,8 @@
 				678E869B1BAFD95800DC88EF /* PageScrollManager.m */,
 				678E86611BAFAE9400DC88EF /* ViewController.h */,
 				678E86621BAFAE9400DC88EF /* ViewController.m */,
+				676FA7951C8EEE4600EF802F /* TestVieController.h */,
+				676FA7961C8EEE4600EF802F /* TestVieController.m */,
 				676869A71BB13A4900877A78 /* Masonry */,
 				676869971BB12BA700877A78 /* 首页 */,
 				678E86641BAFAE9400DC88EF /* Main.storyboard */,
@@ -362,6 +367,7 @@
 				678E869C1BAFD95800DC88EF /* PageScrollManager.m in Sources */,
 				676869C31BB13A4900877A78 /* MASViewAttribute.m in Sources */,
 				676869C21BB13A4900877A78 /* MASLayoutConstraint.m in Sources */,
+				676FA7971C8EEE4600EF802F /* TestVieController.m in Sources */,
 				676869BF1BB13A4900877A78 /* MASCompositeConstraint.m in Sources */,
 				676869A41BB12BA700877A78 /* FirstPageViewController.m in Sources */,
 				676869C41BB13A4900877A78 /* MASViewConstraint.m in Sources */,

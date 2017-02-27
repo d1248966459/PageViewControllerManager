@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "PageScrollManager.h"
 #import "FirstPageViewController.h"
+#import "TestVieController.h"
 
 @interface ViewController ()<PageScrollDelegate,PageScrollDataSource>
 
@@ -59,7 +60,8 @@
         _contentViewControllers = [[NSMutableArray alloc] init];
         FirstPageViewController * firstVC = [[FirstPageViewController alloc] init];
         FirstPageViewController * twoVC = [[FirstPageViewController alloc] init];
-        FirstPageViewController * threeVC = [[FirstPageViewController alloc] init];
+//        FirstPageViewController * threeVC = [[FirstPageViewController alloc] init];
+        TestVieController * threeVC = [TestVieController testVC];
         [_contentViewControllers addObject:twoVC];
         [_contentViewControllers addObject:threeVC];
         [_contentViewControllers addObject:firstVC];

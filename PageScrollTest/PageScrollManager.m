@@ -58,7 +58,8 @@
 -(void)setContentVIewContrains{
     self.contentView = [self.mainViewController.view viewWithTag:kContentViewTag];
     if (!self.contentView) {
-                self.contentView = self.pageViewController.view;
+        
+        self.contentView = self.pageViewController.view;
         self.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         self.contentView.bounds = self.mainViewController.view.bounds;
         self.contentView.tag = kContentViewTag;
